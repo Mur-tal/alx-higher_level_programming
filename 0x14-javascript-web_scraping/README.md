@@ -1,5 +1,7 @@
 # 0x14. JavaScript - Web scraping
 #### `Scripting`, `API`, `JavaScript`
+<hr>
+
 ## Resourses
 ##### Read or watch:
 - [Working with JSON data](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
@@ -14,7 +16,9 @@
 - How to use `request` and fetch API
 - How to read and write a file using `fs` module
 
-#### Requirements:
+<details>
+  <summary>Requirements:</summary>
+  
 - Allowed editors: `vi`, `vim`, `emacs`
 - All your files will be interpreted on Ubuntu 14.04 LTS using `node` (version 10.14.x)
 - All your files should end with a new line
@@ -24,6 +28,12 @@
 - All your files must be executable
 - The length of your files will be tested using `wc`
 - You are not allowed to use `var`
+
+</details>
+
+<details>
+  <summary>Installation</summary>
+  
 ##### Install Node 10
 ```
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
@@ -43,6 +53,8 @@ sudo npm install request --global
 export NODE_PATH=/usr/lib/node_modules
 ```
 **Notes:** Request module has been deprecated since February 2020 - the team is considering alternative to replace this module - however, it’s a really simple and powerful module for practicing web-scraping in JavaScript (and still used a lot in the industry).
+
+</details>
 
 ## Tasks
 
@@ -157,5 +169,73 @@ export NODE_PATH=/usr/lib/node_modules
       '10': 12 }
     guillaume@ubuntu:~/0x14$
     ```
+    
+</details>
+
+<details>
+  
+  <summary>Advanced</summary>
+
+  <b>7. Who was playing in this movie?</b>  
+  Write a script that prints all characters of a Star Wars movie:
+  - The first argument is the Movie ID - example: `3` = “Return of the Jedi”
+  - Display one character name by line
+  - You must use the [Star wars API](https://swapi-api.alx-tools.com/)
+  - You must use the module `request`
+    ```
+    guillaume@ubuntu:~/0x14$ ./100-starwars_characters.js 3
+    Darth Vader
+    R2-D2
+    Luke Skywalker
+    Han Solo
+    Leia Organa
+    Chewbacca
+    Palpatine
+    Obi-Wan Kenobi
+    Jabba Desilijic Tiure
+    Wedge Antilles
+    Yoda
+    Boba Fett
+    Ackbar
+    Arvel Crynyd
+    Mon Mothma
+    Nien Nunb
+    Wicket Systri Warrick
+    Bib Fortuna
+    C-3PO
+    Lando Calrissian
+    guillaume@ubuntu:~/0x14$
+    ```
+
+  <b>8. Right order</b>  
+  Write a script that prints all characters of a Star Wars movie:
+  - The first argument is the Movie ID - example: 3 = “Return of the Jedi”
+  - Display one character name by line **in the same order of the list “characters” in the `/films/` response**
+  - You must use the [Star wars API](https://swapi-api.alx-tools.com/)
+  - You must use the module `request`
+    ```
+    guillaume@ubuntu:~/0x14$ ./101-starwars_characters.js 3
+    Luke Skywalker
+    C-3PO
+    R2-D2
+    Darth Vader
+    Leia Organa
+    Obi-Wan Kenobi
+    Chewbacca
+    Han Solo
+    Jabba Desilijic Tiure
+    Wedge Antilles
+    Yoda
+    Palpatine
+    Boba Fett
+    Lando Calrissian
+    Ackbar
+    Mon Mothma
+    Arvel Crynyd
+    Wicket Systri Warrick
+    Nien Nunb
+    Bib Fortuna
+    guillaume@ubuntu:~/0x14$
+    ``` 
     
 </details>
